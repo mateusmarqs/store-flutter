@@ -63,7 +63,7 @@ class Cart with ChangeNotifier {
     if (_items[productId]?.quantity == 1) {
       _items.remove(productId);
     } else {
-       _items.update(
+      _items.update(
         productId,
         (existingItem) => CartItem(
             id: existingItem.id,
@@ -75,7 +75,7 @@ class Cart with ChangeNotifier {
     }
     notifyListeners();
   }
- 
+
   void clean() {
     _items = {};
     notifyListeners();
